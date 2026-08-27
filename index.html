@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2027 호남권 의치한약수 합격선 상담 자료 - 최초합 예상판</title>
+  <title>2027 호남권 의치한약수 상담 자료 - 예상등급 제외판</title>
   <style>
     :root {
       --bg: #f6f7f4;
@@ -703,7 +703,7 @@
     }
 
     .grade-table {
-      min-width: 1546px;
+      min-width: 1442px;
       table-layout: fixed;
     }
 
@@ -750,7 +750,6 @@
     .grade-table td:nth-child(6),
     .grade-table td:nth-child(8),
     .grade-table td:nth-child(9),
-    .grade-table td:nth-child(10),
     .grade-table .year-history,
     .grade-table .year-forecast,
     .grade-table .group-start,
@@ -773,9 +772,7 @@
     .grade-table th:nth-child(7),
     .grade-table td:nth-child(7),
     .grade-table th:nth-child(8),
-    .grade-table td:nth-child(8),
-    .grade-table th:nth-child(9),
-    .grade-table td:nth-child(9) {
+    .grade-table td:nth-child(8) {
       text-align: center;
     }
 
@@ -1338,18 +1335,17 @@
     <section id="grades" class="view hidden">
       <div class="section-title">
         <div>
-          <h2>전형별 합격선·최초합 예상등급</h2>
-          <p>지난해 합격등급에 올해 모집 인원, 수능최저, 학생 이동을 반영한 상담용 최초합 예상 범위입니다.</p>
+          <h2>전형별 입결·변화 예상</h2>
+          <p>2026 입결과 올해 모집 인원, 수능최저, 학생 이동을 함께 살펴보는 상담용 자료입니다.</p>
         </div>
         <div class="section-title-actions">
-          <button class="forecast-toggle" id="forecastToggle" type="button" aria-haspopup="dialog" aria-expanded="false">2027 최초합 예상 보기</button>
           <span class="count-label" id="gradeCount" aria-live="polite"></span>
         </div>
       </div>
       <div class="assumption">
         <strong>표 읽는 법:</strong> <strong>‘끝선’</strong>은 대교협 합불사례에서 확인된 합격자 중 <strong>내신 등급 숫자가 가장 큰 사례</strong>이며, 대학이 발표한 공식 합격선은 아닙니다.
-        <strong>50%/70%컷</strong>은 대학 발표값입니다. 2027 최초합 예상 숫자만으로 지원을 결정하지 말고 오른쪽 <strong>‘예상과 이유’</strong>를 먼저 확인하십시오.
-        지난해 자료가 없는 신설 전형은 같은 대학의 비슷한 전형을 참고했고, 종합 전형과 모집 인원이 적은 전형은 예상 범위를 넓게 잡았습니다.
+        <strong>50%/70%컷</strong>은 대학 발표값입니다. 오른쪽 <strong>‘예상과 이유’</strong>는 올해 입시 변화를 판단하기 위한 주관적인 참고 의견입니다.
+        지난해 자료가 없는 신설 전형은 같은 대학의 비슷한 전형과 모집 구조를 참고했습니다.
       </div>
       <div class="table-wrap panel">
         <table class="grade-table">
@@ -1362,7 +1358,6 @@
             <col class="col-grade">
             <col class="col-grade">
             <col class="col-percentile">
-            <col class="col-grade">
             <col class="col-reason">
           </colgroup>
           <thead>
@@ -1374,39 +1369,22 @@
               <th rowspan="2">수능최저</th>
               <th colspan="2" class="year-group year-history">2026 대교협 합불사례</th>
               <th class="year-group year-history">2026 대학 발표</th>
-              <th class="year-group year-forecast">2027 예상</th>
               <th rowspan="2" class="reason-head">예상과 이유</th>
             </tr>
             <tr>
               <th class="history-head group-start">최초합 끝선</th>
               <th class="history-head">충원합 끝선</th>
               <th class="history-head group-start">50%/70%컷</th>
-              <th class="forecast-head group-start">최초합 예상</th>
             </tr>
           </thead>
           <tbody id="gradesBody"></tbody>
         </table>
       </div>
       <div class="assumption">
-        <strong>주의:</strong> 예상 범위는 합격을 보장하는 선이 아닙니다. 특히 신설 전형, 종합 전형, 모집 인원이 적은 전형은 학생부와 실제 지원자에 따라 결과가 크게 달라질 수 있습니다.
+        <strong>주의:</strong> 예상 방향과 이유는 합격을 보장하는 판단이 아닙니다. 특히 신설 전형, 종합 전형, 모집 인원이 적은 전형은 학생부와 실제 지원자에 따라 결과가 크게 달라질 수 있습니다.
         수능최저의 <strong>‘합산 필수’</strong>는 해당 영역 등급이 합 계산에 반드시 들어간다는 뜻이고, <strong>‘응시 필수’</strong>는 시험은 치러야 하지만 합 계산에서는 빠질 수 있다는 뜻입니다.
       </div>
     </section>
-
-    <dialog class="forecast-warning" id="forecastWarning" aria-labelledby="forecastWarningTitle">
-      <div class="forecast-warning-inner">
-        <h2 id="forecastWarningTitle">2027 최초합 예상 보기 전 확인</h2>
-        <p>
-          이 예상은 상담 기준을 잡기 위한 <strong>매우 주관적인 참고 자료</strong>이며 대학 발표값이나 합격 보장선이 아닙니다.
-          실제 결과가 범위를 크게 벗어날 수 있으므로 <strong>등급보다 ‘예상과 이유’를 먼저</strong> 보십시오.
-          지원 전에는 최종 모집요강, 학생부 반영 방식, 면접·서류 영향과 <strong>원서 접수 직전 경쟁률</strong>을 반드시 다시 확인해야 합니다.
-        </p>
-        <div class="forecast-warning-actions">
-          <button class="warning-cancel" id="forecastWarningCancel" type="button">취소</button>
-          <button class="warning-confirm" id="forecastWarningConfirm" type="button">확인하고 최초합 예상 보기</button>
-        </div>
-      </div>
-    </dialog>
 
     <footer>
       <div class="credits" aria-label="저작권 및 데이터 출처">
@@ -1851,10 +1829,6 @@
     const gradesBody = document.getElementById("gradesBody");
     const gradeCount = document.getElementById("gradeCount");
     const toolbar = document.getElementById("filterToolbar");
-    const forecastToggle = document.getElementById("forecastToggle");
-    const forecastWarning = document.getElementById("forecastWarning");
-    let forecastsRevealed = false;
-
     function uniqueValues(key) {
       return [...new Set(gradeRows.map(row => row[key]))].sort((a, b) => a.localeCompare(b, "ko"));
     }
@@ -2057,20 +2031,6 @@
       return `<span class="history-grade percentile-grade">${p50Text} · ${p70Text}</span><span class="subnote">50% · 70%</span>`;
     }
 
-    function forecastCell(forecast, final = false) {
-      if (!forecastsRevealed) {
-        return `<span class="forecast-locked">숨김</span><span class="subnote">경고 확인 후 공개</span>`;
-      }
-      const className = final ? "forecast-grade forecast-final" : "forecast-grade";
-      return `<span class="${className}">${forecast.range}</span><span class="subnote">${forecast.mode} 기반 · 추정치</span>`;
-    }
-
-    function syncForecastToggle() {
-      forecastToggle.textContent = forecastsRevealed ? "2027 최초합 예상 숨기기" : "2027 최초합 예상 보기";
-      forecastToggle.classList.toggle("revealed", forecastsRevealed);
-      forecastToggle.setAttribute("aria-expanded", String(forecastsRevealed));
-    }
-
     function sourceMinimumCell(row) {
       const minimum = officialMinimumText(row, row.min || "수능최저 없음");
       return minimumDisplay(minimum, "2027 모집요강 확인", row);
@@ -2105,11 +2065,10 @@
             <td>${historicalGrade(row.f26)}</td>
             <td>${historicalGrade(row.l26)}</td>
             <td>${publishedPercentiles(row)}</td>
-            <td>${forecastCell(row.firstForecast)}</td>
             <td>${trendBadge(row)}<span class="confidence">신뢰도 ${row.confidence}</span><span class="basis-note">${plainLanguage(reason)}</span></td>
           </tr>
         `;
-      }).join("") || `<tr><td colspan="10">조건에 맞는 항목이 없습니다.</td></tr>`;
+      }).join("") || `<tr><td colspan="9">조건에 맞는 항목이 없습니다.</td></tr>`;
     }
 
     function renderAll() {
@@ -2136,32 +2095,7 @@
       renderAll();
     });
 
-    forecastToggle.addEventListener("click", () => {
-      if (forecastsRevealed) {
-        forecastsRevealed = false;
-        syncForecastToggle();
-        renderAll();
-        return;
-      }
-      if (typeof forecastWarning.showModal === "function") {
-        forecastWarning.showModal();
-      } else if (window.confirm("2027 예상등급은 매우 주관적인 참고 자료이며 합격을 보장하지 않습니다. 등급보다 예상과 이유를 먼저 보고, 지원 전 최종 모집요강과 접수 직전 경쟁률을 반드시 확인하십시오.")) {
-        forecastsRevealed = true;
-        syncForecastToggle();
-        renderAll();
-      }
-    });
-
-    document.getElementById("forecastWarningCancel").addEventListener("click", () => forecastWarning.close());
-    document.getElementById("forecastWarningConfirm").addEventListener("click", () => {
-      forecastsRevealed = true;
-      forecastWarning.close();
-      syncForecastToggle();
-      renderAll();
-    });
-
     fillFilters();
-    syncForecastToggle();
     renderAll();
   </script>
 </body>
