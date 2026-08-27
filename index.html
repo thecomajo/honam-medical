@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2027 호남권 의치한약수 합격선 상담 자료 - 충원합 숨김판</title>
+  <title>2027 호남권 의치한약수 합격선 상담 자료 - 최초합 예상판</title>
   <style>
     :root {
       --bg: #f6f7f4;
@@ -781,8 +781,8 @@
     .grade-table td:nth-child(8),
     .grade-table th:nth-child(9),
     .grade-table td:nth-child(9),
-    .grade-table th:nth-child(10),
-    .grade-table td:nth-child(10) {
+    .grade-table th:nth-child(9),
+    .grade-table td:nth-child(9) {
       text-align: center;
     }
 
@@ -1270,7 +1270,7 @@
   <main class="wrap">
     <nav class="tabs" aria-label="표 전환">
       <button class="tab active" data-view="guide" type="button">자료 설명</button>
-      <button class="tab" data-view="grades" type="button">전형별 합격선·예상등급</button>
+      <button class="tab" data-view="grades" type="button">전형별 합격선·최초합 예상</button>
     </nav>
 
     <section class="toolbar panel hidden" id="filterToolbar" aria-label="표 선택">
@@ -1380,11 +1380,11 @@
     <section id="grades" class="view hidden">
       <div class="section-title">
         <div>
-          <h2>전형별 합격선·예상등급</h2>
-          <p>지난해 합격등급에 올해 모집 인원, 수능최저, 학생 이동을 반영한 상담용 예상 범위입니다. 이 버전은 2027 충원합 끝선을 숨기고 최초합 끝선만 표시합니다.</p>
+          <h2>전형별 합격선·최초합 예상등급</h2>
+          <p>지난해 합격등급에 올해 모집 인원, 수능최저, 학생 이동을 반영한 상담용 예상 범위입니다.</p>
         </div>
         <div class="section-title-actions">
-          <button class="forecast-toggle" id="forecastToggle" type="button" aria-haspopup="dialog" aria-expanded="false">2027 예상등급 보기</button>
+          <button class="forecast-toggle" id="forecastToggle" type="button" aria-haspopup="dialog" aria-expanded="false">2027 최초합 예상 보기</button>
           <span class="count-label" id="gradeCount" aria-live="polite"></span>
         </div>
       </div>
@@ -1437,7 +1437,7 @@
 
     <dialog class="forecast-warning" id="forecastWarning" aria-labelledby="forecastWarningTitle">
       <div class="forecast-warning-inner">
-        <h2 id="forecastWarningTitle">2027 예상등급 보기 전 확인</h2>
+        <h2 id="forecastWarningTitle">2027 최초합 예상 보기 전 확인</h2>
         <p>
           이 예상은 상담 기준을 잡기 위한 <strong>매우 주관적인 참고 자료</strong>이며 대학 발표값이나 합격 보장선이 아닙니다.
           실제 결과가 범위를 크게 벗어날 수 있으므로 <strong>등급보다 ‘예상과 이유’를 먼저</strong> 보십시오.
@@ -1445,7 +1445,7 @@
         </p>
         <div class="forecast-warning-actions">
           <button class="warning-cancel" id="forecastWarningCancel" type="button">취소</button>
-          <button class="warning-confirm" id="forecastWarningConfirm" type="button">확인하고 예상등급 보기</button>
+          <button class="warning-confirm" id="forecastWarningConfirm" type="button">확인하고 최초합 예상 보기</button>
         </div>
       </div>
     </dialog>
@@ -2119,7 +2119,7 @@
     }
 
     function syncForecastToggle() {
-      forecastToggle.textContent = forecastsRevealed ? "2027 예상등급 숨기기" : "2027 예상등급 보기";
+      forecastToggle.textContent = forecastsRevealed ? "2027 최초합 예상 숨기기" : "2027 최초합 예상 보기";
       forecastToggle.classList.toggle("revealed", forecastsRevealed);
       forecastToggle.setAttribute("aria-expanded", String(forecastsRevealed));
     }
