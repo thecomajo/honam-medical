@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2027 호남권 의치한약수 합격선 상담 자료 - 최초합 예상판</title>
+  <title>2027 호남권 의치한약수 합격선 상담 자료 - 최초합 끝선판</title>
   <style>
     :root {
       --bg: #f6f7f4;
@@ -337,7 +337,7 @@
 
     .filters {
       display: grid;
-      grid-template-columns: repeat(4, minmax(128px, 1fr));
+      grid-template-columns: repeat(5, minmax(128px, 1fr));
       gap: 10px;
     }
 
@@ -708,18 +708,17 @@
     }
 
     .grade-table {
-      min-width: 1546px;
+      min-width: 1565px;
       table-layout: fixed;
     }
 
-    .grade-table .col-admission { width: 132px; }
-    .grade-table .col-major { width: 146px; }
-    .grade-table .col-field { width: 74px; }
-    .grade-table .col-seats { width: 76px; }
+    .grade-table .col-admission { width: 177px; }
+    .grade-table .col-field { width: 88px; }
+    .grade-table .col-seats { width: 88px; }
     .grade-table .col-minimum { width: 198px; }
     .grade-table .col-grade { width: 104px; }
     .grade-table .col-percentile { width: 120px; }
-    .grade-table .col-reason { width: 500px; }
+    .grade-table .col-reason { width: 580px; }
 
     .grade-table thead tr:first-child th {
       height: 42px;
@@ -752,10 +751,10 @@
       color: #1f5d48;
     }
 
-    .grade-table td:nth-child(6),
+    .grade-table td:nth-child(5),
+    .grade-table td:nth-child(7),
     .grade-table td:nth-child(8),
     .grade-table td:nth-child(9),
-    .grade-table td:nth-child(10),
     .grade-table .year-history,
     .grade-table .year-forecast,
     .grade-table .group-start,
@@ -771,43 +770,34 @@
       background: #f2f7f3;
     }
 
-    .grade-table th:nth-child(4),
-    .grade-table td:nth-child(4),
+    .grade-table th:nth-child(3),
+    .grade-table td:nth-child(3),
+    .grade-table th:nth-child(5),
+    .grade-table td:nth-child(5),
     .grade-table th:nth-child(6),
     .grade-table td:nth-child(6),
     .grade-table th:nth-child(7),
     .grade-table td:nth-child(7),
     .grade-table th:nth-child(8),
-    .grade-table td:nth-child(8),
-    .grade-table th:nth-child(9),
-    .grade-table td:nth-child(9),
-    .grade-table th:nth-child(9),
-    .grade-table td:nth-child(9) {
+    .grade-table td:nth-child(8) {
       text-align: center;
-    }
-
-    .grade-table th:nth-child(3),
-    .grade-table td:nth-child(3) {
-      width: 62px;
-      min-width: 62px;
-    }
-
-    .grade-table th:first-child,
-    .grade-table td:first-child {
-      width: 132px;
-      min-width: 132px;
-      max-width: 148px;
     }
 
     .grade-table th:nth-child(2),
     .grade-table td:nth-child(2) {
-      width: 146px;
-      min-width: 146px;
-      max-width: 160px;
+      width: 88px;
+      min-width: 88px;
     }
 
-    .grade-table th:nth-child(5),
-    .grade-table td:nth-child(5) {
+    .grade-table th:first-child,
+    .grade-table td:first-child {
+      width: 177px;
+      min-width: 177px;
+      max-width: 190px;
+    }
+
+    .grade-table th:nth-child(4),
+    .grade-table td:nth-child(4) {
       width: 198px;
       min-width: 198px;
       max-width: 215px;
@@ -820,27 +810,86 @@
 
     .grade-table td:first-child .track {
       margin-top: 4px;
-      font-size: 13.5px;
-      line-height: 1.4;
-    }
-
-    .major-name {
-      display: block;
-      color: #26372e;
-      font-size: 14px;
-      font-weight: 850;
+      font-size: 13px;
       line-height: 1.45;
       word-break: keep-all;
+      overflow-wrap: anywhere;
     }
 
     .scope-line {
-      display: block;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
       margin-top: 5px;
-      color: var(--accent-2);
-      font-size: 12.5px;
-      font-weight: 800;
-      line-height: 1.35;
-      white-space: normal;
+      padding: 3px 7px;
+      border: 1px solid #b7d0e2;
+      border-radius: 5px;
+      color: #19557e;
+      background: #edf6fc;
+      font-size: 11.5px;
+      font-weight: 900;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .scope-line::before {
+      content: "지원 ·";
+      color: #617482;
+      font-size: 10.5px;
+      font-weight: 750;
+    }
+
+    .seat-change {
+      display: grid;
+      justify-items: center;
+      gap: 5px;
+      min-width: 0;
+    }
+
+    .seat-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      padding: 3px 7px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    .seat-mark[data-change="new"] {
+      color: #17588a;
+      background: #eaf4fb;
+      border-color: #b8d7ea;
+    }
+
+    .seat-mark[data-change="increase"] {
+      color: #17643d;
+      background: #eaf6ef;
+      border-color: #b9ddc8;
+    }
+
+    .seat-mark[data-change="decrease"] {
+      color: #a13932;
+      background: #fff0ed;
+      border-color: #efc2bb;
+    }
+
+    .seat-mark[data-change="unchanged"] {
+      color: #536069;
+      background: #f1f3f4;
+      border-color: #d4d9dc;
+    }
+
+    .seat-count {
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1.25;
+      white-space: nowrap;
     }
 
     .field-label {
@@ -898,6 +947,33 @@
       color: #52306f;
       background: #efe4fb;
       border-color: #c7a5e8;
+    }
+
+    .division-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 21px;
+      padding: 2px 7px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .division-label[data-division="인문"] {
+      color: #7a2431;
+      background: #f9e4e7;
+      border-color: #e7afb8;
+    }
+
+    .division-label[data-division="자연"] {
+      color: #1e507e;
+      background: #e4f0fa;
+      border-color: #a9cae5;
     }
 
     .field-label.compact {
@@ -1245,7 +1321,7 @@
   <header>
     <div class="wrap">
       <div class="topline">
-        <span>2027 수시 상담용 · 호남권 의치한약수</span>
+        <span>2027 수시 상담용 · 호남권 의치한약수 · 최초합 끝선판</span>
         <span>자료 성격: 예측·가설 정리</span>
       </div>
       <div class="title">
@@ -1282,6 +1358,15 @@
         <label class="filter-control primary">
           <span>대학</span>
           <select id="collegeFilter"><option value="all">모든 대학</option></select>
+        </label>
+        <label class="filter-control primary">
+          <span>전형 구분</span>
+          <select id="admissionGroupFilter">
+            <option value="all">모든 전형</option>
+            <option value="general">일반</option>
+            <option value="regional">지역인재</option>
+            <option value="regionalDoctor">지역의사제</option>
+          </select>
         </label>
         <label class="filter-control">
           <span>교과·종합</span>
@@ -1380,11 +1465,11 @@
     <section id="grades" class="view hidden">
       <div class="section-title">
         <div>
-          <h2>전형별 합격선·최초합 예상등급</h2>
+          <h2>전형별 합격선·최초합 예상</h2>
           <p>지난해 합격등급에 올해 모집 인원, 수능최저, 학생 이동을 반영한 상담용 예상 범위입니다.</p>
         </div>
         <div class="section-title-actions">
-          <button class="forecast-toggle" id="forecastToggle" type="button" aria-haspopup="dialog" aria-expanded="false">2027 최초합 예상 보기</button>
+          <button class="forecast-toggle" id="forecastToggle" type="button" aria-haspopup="dialog" aria-expanded="false">2027 예상등급 보기</button>
           <span class="count-label" id="gradeCount" aria-live="polite"></span>
         </div>
       </div>
@@ -1397,7 +1482,6 @@
         <table class="grade-table">
           <colgroup>
             <col class="col-admission">
-            <col class="col-major">
             <col class="col-field">
             <col class="col-seats">
             <col class="col-minimum">
@@ -1410,7 +1494,6 @@
           <thead>
             <tr>
               <th rowspan="2">대학·전형</th>
-              <th rowspan="2">모집단위</th>
               <th rowspan="2">계열</th>
               <th rowspan="2">모집 인원</th>
               <th rowspan="2">수능최저</th>
@@ -1437,7 +1520,7 @@
 
     <dialog class="forecast-warning" id="forecastWarning" aria-labelledby="forecastWarningTitle">
       <div class="forecast-warning-inner">
-        <h2 id="forecastWarningTitle">2027 최초합 예상 보기 전 확인</h2>
+        <h2 id="forecastWarningTitle">2027 예상등급 보기 전 확인</h2>
         <p>
           이 예상은 상담 기준을 잡기 위한 <strong>매우 주관적인 참고 자료</strong>이며 대학 발표값이나 합격 보장선이 아닙니다.
           실제 결과가 범위를 크게 벗어날 수 있으므로 <strong>등급보다 ‘예상과 이유’를 먼저</strong> 보십시오.
@@ -1445,7 +1528,7 @@
         </p>
         <div class="forecast-warning-actions">
           <button class="warning-cancel" id="forecastWarningCancel" type="button">취소</button>
-          <button class="warning-confirm" id="forecastWarningConfirm" type="button">확인하고 최초합 예상 보기</button>
+          <button class="warning-confirm" id="forecastWarningConfirm" type="button">확인하고 예상등급 보기</button>
         </div>
       </div>
     </dialog>
@@ -1626,6 +1709,13 @@
       if (row.college === "전남대" && major.includes("치의학")) return "치의학과(학·석사통합과정)";
       if (row.college === "우석대" && major.startsWith("약학과")) return "약학과";
       return major || (row.field === "의대" ? "의예과" : "");
+    }
+
+    function majorDivision(row) {
+      const major = String(row.major || "");
+      if (major.includes("(인문)")) return "인문";
+      if (major.includes("(자연)")) return "자연";
+      return "";
     }
 
     function scopeFromSource(source, college) {
@@ -1812,6 +1902,19 @@
       return `${row.seats26}→${row.seats27}명`;
     }
 
+    function seatChangeCell(row) {
+      if (!row.seats26) {
+        return `<span class="seat-change"><span class="seat-mark" data-change="new">신설</span><span class="seat-count">${row.seats27}명</span></span>`;
+      }
+      if (row.seats27 > row.seats26) {
+        return `<span class="seat-change"><span class="seat-mark" data-change="increase">증가</span><span class="seat-count">${row.seats26}→${row.seats27}명</span></span>`;
+      }
+      if (row.seats27 < row.seats26) {
+        return `<span class="seat-change"><span class="seat-mark" data-change="decrease">감소</span><span class="seat-count">${row.seats26}→${row.seats27}명</span></span>`;
+      }
+      return `<span class="seat-change"><span class="seat-mark" data-change="unchanged">유지</span><span class="seat-count">${row.seats27}명</span></span>`;
+    }
+
     const regionalAssumptionMap = new Map(
       regionalRows.map(row => [`${row.college}|${row.scope}`, row])
     );
@@ -1887,6 +1990,7 @@
       });
 
     const collegeFilter = document.getElementById("collegeFilter");
+    const admissionGroupFilter = document.getElementById("admissionGroupFilter");
     const fieldFilter = document.getElementById("fieldFilter");
     const typeFilter = document.getElementById("typeFilter");
     const trendFilter = document.getElementById("trendFilter");
@@ -1907,8 +2011,16 @@
       uniqueValues("type").forEach(value => typeFilter.append(new Option(value, value)));
     }
 
+    function admissionGroup(row) {
+      const scope = String(row.scope || "");
+      if (scope.startsWith("지역의사(")) return "regionalDoctor";
+      if (scope.startsWith("지역인재(")) return "regional";
+      return "general";
+    }
+
     function matches(row) {
       return (collegeFilter.value === "all" || row.college === collegeFilter.value)
+        && (admissionGroupFilter.value === "all" || admissionGroup(row) === admissionGroupFilter.value)
         && (fieldFilter.value === "all" || row.field === fieldFilter.value)
         && (typeFilter.value === "all" || row.type === typeFilter.value)
         && (trendFilter.value === "all" || row.trend === trendFilter.value);
@@ -2119,7 +2231,7 @@
     }
 
     function syncForecastToggle() {
-      forecastToggle.textContent = forecastsRevealed ? "2027 최초합 예상 숨기기" : "2027 최초합 예상 보기";
+      forecastToggle.textContent = forecastsRevealed ? "2027 예상등급 숨기기" : "2027 예상등급 보기";
       forecastToggle.classList.toggle("revealed", forecastsRevealed);
       forecastToggle.setAttribute("aria-expanded", String(forecastsRevealed));
     }
@@ -2129,11 +2241,70 @@
       return minimumDisplay(minimum, "2027 모집요강 확인", row);
     }
 
-    function admissionWithType(row) {
+    function displayAdmissionName(row) {
       const admission = String(row.admission || "");
-      return admission.startsWith(row.type) || admission === row.type
-        ? admission
-        : `${row.type} · ${admission}`;
+
+      if (admission.startsWith("지역의사(")) return "지역의사선발전형";
+
+      const officialNames = {
+        "전북대": {
+          "일반학생": "일반학생전형",
+          "큰사람": "큰사람전형",
+          "지역인재 1": "지역인재 1 유형전형",
+          "지역인재 2": "지역인재 2 유형전형"
+        },
+        "원광대": {
+          "학생부종합": "학생부종합전형",
+          "지역인재(전북)": "지역인재Ⅰ전형",
+          "지역인재(호남)": "지역인재Ⅰ전형",
+          "지역인재Ⅰ(전북)": "지역인재Ⅰ전형",
+          "지역인재Ⅰ(호남)": "지역인재Ⅰ전형"
+        },
+        "전남대": {
+          "교과(일반)": "학생부교과(일반)",
+          "교과(지역)": "학생부교과(지역인재)",
+          "종합(고교Ⅰ)": "학생부종합(고교생활우수자Ⅰ)"
+        },
+        "조선대": {
+          "교과일반": "일반전형",
+          "학생부교과": "일반전형",
+          "지역인재": "지역인재전형",
+          "면접": "면접전형",
+          "서류": "서류전형"
+        },
+        "목포대": {
+          "교과(일반)": "교과일반전형",
+          "교과(지역)": "지역인재전형",
+          "종합(지역)": "지역인재(종합)전형"
+        },
+        "순천대": {
+          "교과일반": "교과일반전형",
+          "지역인재": "지역인재전형",
+          "종합(일반)": "종합면접전형"
+        },
+        "우석대": {
+          "교과": "교과면접",
+          "교과중심": "교과",
+          "지역인재1(전북)": "지역인재1",
+          "지역인재2(호남)": "지역인재2"
+        },
+        "동신대": {
+          "일반": "일반전형",
+          "지역학생1": "지역학생1전형",
+          "지역학생2": "지역학생2전형"
+        }
+      };
+
+      return officialNames[row.college]?.[admission]
+        || admission.replace(/\((전북|호남)\)$/, "").trim();
+    }
+
+    function supportRegionLabel(row) {
+      const scope = String(row.scope || "");
+      const regionalDoctor = scope.match(/^지역의사\((.+)\)$/);
+      if (regionalDoctor) return regionalDoctor[1];
+      const regionalAdmission = scope.match(/^지역인재\((전북|호남|광주전남)\)$/);
+      return regionalAdmission ? regionalAdmission[1] : "";
     }
 
     function renderGrades() {
@@ -2147,13 +2318,15 @@
           : "";
         const overlapNote = applicationOverlapNote(row);
         const reason = `${row.effect}${sciencePoolNote}${overlapNote}${sourceNote}`;
-        const scopeLine = row.scope === row.admission ? "" : `<span class="scope-line">${escapeHtml(row.scope)}</span>`;
+        const supportRegion = supportRegionLabel(row);
+        const scopeLine = supportRegion ? `<span class="scope-line">${escapeHtml(supportRegion)}</span>` : "";
+        const division = majorDivision(row);
+        const divisionLabel = division ? `<span class="division-label" data-division="${division}">${division}</span>` : "";
         return `
           <tr>
-            <td><span class="college">${row.college}</span><span class="track">${escapeHtml(admissionWithType(row))}</span>${scopeLine}</td>
-            <td><span class="major-name">${escapeHtml(officialMajorName(row))}</span></td>
-            <td><span class="field-stack"><span class="field-label" data-field="${row.field}">${row.field}</span><span class="type-label" data-type="${row.type}">${row.type}</span></span></td>
-            <td>${row.seatChange}</td>
+            <td><span class="college">${row.college}</span><span class="track">${escapeHtml(displayAdmissionName(row))}</span>${scopeLine}</td>
+            <td><span class="field-stack"><span class="field-label" data-field="${row.field}">${row.field}</span><span class="type-label" data-type="${row.type}">${row.type}</span>${divisionLabel}</span></td>
+            <td>${seatChangeCell(row)}</td>
             <td class="minimum-compact">${sourceMinimumCell(row)}</td>
             <td>${historicalGrade(row.f26, row)}</td>
             <td>${historicalGrade(row.l26, row)}</td>
@@ -2162,7 +2335,7 @@
             <td>${trendBadge(row)}<span class="confidence">신뢰도 ${row.confidence}</span><span class="basis-note">${plainLanguage(reason)}</span></td>
           </tr>
         `;
-      }).join("") || `<tr><td colspan="10">조건에 맞는 항목이 없습니다.</td></tr>`;
+      }).join("") || `<tr><td colspan="9">조건에 맞는 항목이 없습니다.</td></tr>`;
     }
 
     function renderAll() {
@@ -2180,9 +2353,10 @@
       });
     });
 
-    [collegeFilter, fieldFilter, typeFilter, trendFilter].forEach(filter => filter.addEventListener("change", renderAll));
+    [collegeFilter, admissionGroupFilter, fieldFilter, typeFilter, trendFilter].forEach(filter => filter.addEventListener("change", renderAll));
     document.getElementById("resetFilters").addEventListener("click", () => {
       collegeFilter.value = "all";
+      admissionGroupFilter.value = "all";
       fieldFilter.value = "all";
       typeFilter.value = "all";
       trendFilter.value = "all";
